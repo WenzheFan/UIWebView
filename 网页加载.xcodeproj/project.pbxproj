@@ -12,6 +12,7 @@
 		1ADB0B4122BA0DC100A5DBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADB0B3F22BA0DC100A5DBBD /* Main.storyboard */; };
 		1ADB0B4322BA0DC300A5DBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADB0B4222BA0DC300A5DBBD /* Assets.xcassets */; };
 		1ADB0B4622BA0DC300A5DBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADB0B4422BA0DC300A5DBBD /* LaunchScreen.storyboard */; };
+		1ADB0B4E22BA0E2F00A5DBBD /* MyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB0B4D22BA0E2F00A5DBBD /* MyWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1ADB0B4222BA0DC300A5DBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ADB0B4522BA0DC300A5DBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ADB0B4722BA0DC300A5DBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADB0B4D22BA0E2F00A5DBBD /* MyWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				1ADB0B3B22BA0DC100A5DBBD /* AppDelegate.swift */,
 				1ADB0B3D22BA0DC100A5DBBD /* ViewController.swift */,
+				1ADB0B4D22BA0E2F00A5DBBD /* MyWebViewController.swift */,
 				1ADB0B3F22BA0DC100A5DBBD /* Main.storyboard */,
 				1ADB0B4222BA0DC300A5DBBD /* Assets.xcassets */,
 				1ADB0B4422BA0DC300A5DBBD /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ADB0B3E22BA0DC100A5DBBD /* ViewController.swift in Sources */,
+				1ADB0B4E22BA0E2F00A5DBBD /* MyWebViewController.swift in Sources */,
 				1ADB0B3C22BA0DC100A5DBBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

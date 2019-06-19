@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,15 +13,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="网页加载" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jao-UI-akh">
+                                <rect key="frame" x="164" y="393" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="butoon:" destination="BYZ-38-t0r" eventType="touchDown" id="0dv-if-SRT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--网页-->
+        <scene sceneID="gVN-qf-lg3">
+            <objects>
+                <viewController storyboardIdentifier="MyWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hNF-Y7-sw5" customClass="MyWebViewController" customModule="网页加载" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aqf-9c-wSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-Ac-ria">
+                                <rect key="frame" x="0.0" y="836" width="414" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IJ5-FI-gbk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="首页"/>
+                                    <segment title="后退"/>
+                                    <segment title="前进"/>
+                                    <segment title="刷新"/>
+                                </segments>
+                                <connections>
+                                    <action selector="hander:" destination="hNF-Y7-sw5" eventType="valueChanged" id="sdn-zq-1u8"/>
+                                </connections>
+                            </segmentedControl>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-87-0io">
+                                <rect key="frame" x="0.0" y="88" width="414" height="748"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hNF-Y7-sw5" id="xKf-QX-uIl"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3Z-Ac-ria" firstAttribute="top" secondItem="5ej-87-0io" secondAttribute="bottom" id="3hv-2v-ORu"/>
+                            <constraint firstItem="QEg-Vi-BPN" firstAttribute="trailing" secondItem="5ej-87-0io" secondAttribute="trailing" id="5ao-lw-Iem"/>
+                            <constraint firstItem="5ej-87-0io" firstAttribute="leading" secondItem="QEg-Vi-BPN" secondAttribute="leading" id="E0F-h9-5bl"/>
+                            <constraint firstItem="B3Z-Ac-ria" firstAttribute="leading" secondItem="QEg-Vi-BPN" secondAttribute="leading" id="atA-UP-O8s"/>
+                            <constraint firstItem="5ej-87-0io" firstAttribute="top" secondItem="QEg-Vi-BPN" secondAttribute="top" id="qGp-1o-VRb"/>
+                            <constraint firstAttribute="bottom" secondItem="B3Z-Ac-ria" secondAttribute="bottom" id="yJ7-XI-6OE"/>
+                            <constraint firstItem="QEg-Vi-BPN" firstAttribute="trailing" secondItem="B3Z-Ac-ria" secondAttribute="trailing" id="zAx-JS-aYT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QEg-Vi-BPN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="网页" id="Fxe-Pd-LGu">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6Iv-R6-E5b">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="09L-Kr-uzb">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;返回"/>
+                                <connections>
+                                    <action selector="goToROot:" destination="hNF-Y7-sw5" eventType="touchDown" id="Oca-9e-1sz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="web" destination="5ej-87-0io" id="jBs-8k-sXy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlj-mB-Jm7" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
